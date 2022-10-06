@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "project": {
+    "name": "sanityPersonal"
+  },
+  "__experimental_spaces": [
+    {
+      "name": "prod",
+      "title": "Production",
+      "default": true,
+      "api": {
+        "projectId": "oyobxqeu",
+        "dataset": "prod"
+      }
+    },
+    {
+      "name": "iot",
+      "title": "IOT",
+      "api": {
+        "projectId": "oyobxqeu",
+        "dataset": "iot"
+      }
+    }
+  ],
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "barcode-input"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
